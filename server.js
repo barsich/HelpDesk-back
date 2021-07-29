@@ -1,3 +1,4 @@
+const http = require('http');
 const Koa = require('koa');
 const koaBody = require('koa-body');
 const cors = require('@koa/cors');
@@ -98,9 +99,12 @@ app.use(async (context) => {
 });
 
 const port = process.env.PORT || 7070;
-app.listen(port, (error) => {
-  if (error) {
-    return console.log('Error occured:', error);
-  }
-  console.log(`server is listening on ${port}`);
-});
+
+// app.listen(port, (error) => {
+//   if (error) {
+//     return console.log('Error occured:', error);
+//   }
+//   console.log(`server is listening on ${port}`);
+// });
+
+http.createServer(app.callback()).listen(port);
