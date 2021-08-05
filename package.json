@@ -16,12 +16,10 @@
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
     "koa-multer": "^1.0.2",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "uuid": "^8.3.2"
   },
   "engines": {
     "node": "14.x"
-  },
-  "devDependencies": {
-    "uuid": "^8.3.2"
   }
 }
